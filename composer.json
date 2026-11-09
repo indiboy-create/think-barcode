@@ -1,0 +1,51 @@
+{
+    "name": "youvision/think-barcode",
+    "description": "基于 picqer/php-barcode-generator 的 ThinkPHP 8 条形码生成组件",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "thinkphp",
+        "thinkphp8",
+        "barcode",
+        "code128",
+        "code39",
+        "ean13",
+        "picqer"
+    ],
+    "authors": [
+        {
+            "name": "youvision"
+        }
+    ],
+    "require": {
+        "php": ">=8.2",
+        "picqer/php-barcode-generator": "^3.3",
+        "topthink/framework": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "youvision\\think\\barcode\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "extra": {
+        "think": {
+            "services": [
+                "youvision\\think\\barcode\\Service"
+            ],
+            "config": {
+                "barcode": "config/barcode.php"
+            }
+        }
+    },
+    "scripts": {
+        "test": "@php tests/verify.php"
+    },
+    "config": {
+        "prefer-stable": true,
+        "sort-packages": true
+    },
+    "minimum-stability": "stable"
+}
